@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-10T13:01:22 IST" name="Default suite" finished-at="2023-05-10T13:02:06 IST" duration-ms="44135">
+    <groups>
+    </groups>
+    <test started-at="2023-05-10T13:01:22 IST" name="Default test" finished-at="2023-05-10T13:02:06 IST" duration-ms="44135">
+      <class name="testNgTestsExecution.HomePageTestt">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:22 IST" name="openUrl" finished-at="2023-05-10T13:01:23 IST" duration-ms="859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="hoverOnPages()[pri:-1, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:23 IST" name="hoverOnPages" finished-at="2023-05-10T13:01:23 IST" duration-ms="533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hoverOnPages -->
+        <test-method signature="clickHome()[pri:1, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:23 IST" name="clickHome" finished-at="2023-05-10T13:01:24 IST" duration-ms="529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickHome -->
+        <test-method signature="clickContact()[pri:2, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:24 IST" name="clickContact" finished-at="2023-05-10T13:01:33 IST" duration-ms="9293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickContact -->
+        <test-method signature="acceptAlert()[pri:3, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:33 IST" name="acceptAlert" finished-at="2023-05-10T13:01:33 IST" duration-ms="117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acceptAlert -->
+        <test-method signature="accepgeoLocation()[pri:4, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:33 IST" name="accepgeoLocation" finished-at="2023-05-10T13:01:52 IST" duration-ms="19089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accepgeoLocation -->
+        <test-method signature="subscribeEssence()[pri:5, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:52 IST" name="subscribeEssence" finished-at="2023-05-10T13:01:53 IST" duration-ms="852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscribeEssence -->
+        <test-method signature="hoverOnShopSelectDresses()[pri:6, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:53 IST" name="hoverOnShopSelectDresses" finished-at="2023-05-10T13:01:55 IST" duration-ms="2093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hoverOnShopSelectDresses -->
+        <test-method signature="selectAproductAndClickAddToCart()[pri:7, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:55 IST" name="selectAproductAndClickAddToCart" finished-at="2023-05-10T13:01:56 IST" duration-ms="1127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectAproductAndClickAddToCart -->
+        <test-method signature="goToCheckout()[pri:8, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:56 IST" name="goToCheckout" finished-at="2023-05-10T13:01:59 IST" duration-ms="2520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToCheckout -->
+        <test-method signature="enterBillingAddressDetails()[pri:9, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:01:59 IST" name="enterBillingAddressDetails" finished-at="2023-05-10T13:02:01 IST" duration-ms="1763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterBillingAddressDetails -->
+        <test-method signature="selectPayment()[pri:10, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:02:01 IST" name="selectPayment" finished-at="2023-05-10T13:02:02 IST" duration-ms="1387" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectPayment -->
+        <test-method signature="clickOnPlaceOrder()[pri:11, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:02:02 IST" name="clickOnPlaceOrder" finished-at="2023-05-10T13:02:02 IST" duration-ms="324" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnPlaceOrder -->
+        <test-method signature="acceptConditions()[pri:12, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:02:02 IST" name="acceptConditions" finished-at="2023-05-10T13:02:03 IST" duration-ms="365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acceptConditions -->
+        <test-method signature="checkboxesConditions()[pri:13, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:02:03 IST" name="checkboxesConditions" finished-at="2023-05-10T13:02:03 IST" duration-ms="475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxesConditions -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:testNgTestsExecution.HomePageTestt@6192a5d5]" started-at="2023-05-10T13:02:03 IST" name="quitBrowser" finished-at="2023-05-10T13:02:06 IST" duration-ms="2649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- testNgTestsExecution.HomePageTestt -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

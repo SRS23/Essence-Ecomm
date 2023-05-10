@@ -1,0 +1,291 @@
+package pageFactory;
+
+import java.time.Duration;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.CommonFunctions;
+
+import utilities.DriversInit;
+
+public class EssenceEcommWebElements {
+	
+
+	
+	Actions action = new Actions(DriversInit.driver);
+	
+	CommonFunctions cfs = new CommonFunctions();
+	
+	public EssenceEcommWebElements(WebDriver driver) {
+		
+		PageFactory.initElements( driver, this);
+	}
+	
+	
+	@FindBy(xpath=("//li[@class='cn-dropdown-item has-down pr12']"))WebElement pages; 
+	
+	@FindBy(how =How.XPATH, using="(//a[@href='index.html'])[2]")WebElement Home;
+	
+	@FindBy(xpath="(//a[@href='contact.html'])[1]")WebElement contact;
+	
+	@FindBy(how = How.XPATH, using="//button[@class=\"dismissButton\"]")WebElement ok;
+	
+	@FindBy(xpath="//input[@name=\"mail\"]")WebElement mailid;
+	
+	@FindBy(how=How.XPATH, using="//li[@class='megamenu-item']")WebElement shop;
+	
+	@FindBy(xpath="(//a[@href=\"shop.html\"])[1]")WebElement Dresses;
+	
+	@FindBy(xpath="(//img[@src='img/product-img/product-2.jpg'])[2]")WebElement hover_image;
+	
+	@FindBy(xpath="(//a[@class=\"btn essence-btn\"])[2]")WebElement addtocart;
+	
+	@FindBy(xpath="//a[@id='essenceCartBtn']") WebElement checkoutimage;
+	
+	@FindBy(how = How.XPATH, using="(//a[@class='btn essence-btn'])[1]")WebElement checkout;
+	
+	@FindBy(xpath="//input[@id=\"first_name\"]")WebElement firstname;
+	
+	@FindBy(xpath="//input[@id='last_name']")WebElement lastname;
+	
+	@FindBy(xpath="//input[@id='company']")WebElement company;
+	
+	@FindBy(how = How.XPATH, using="//div[@class='nice-select w-100']")WebElement   click_country;
+	
+	@FindBy(how = How.XPATH, using="//li[@data-value='ind']")WebElement   country;
+	
+	@FindBy(xpath="//input[@id='street_address']")WebElement streetAddress;
+	
+	@FindBy(xpath="//input[@id='street_address']")WebElement streetAddress2;
+	
+	@FindBy(xpath="//input[@id='postcode']")WebElement postcode;
+	
+	@FindBy(xpath="//input[@id='city']")WebElement city;
+	
+	@FindBy(how = How.XPATH, using="//input[@id='state']")WebElement  province;
+	
+	@FindBy(how = How.XPATH, using="//input[@id='phone_number']")WebElement  phonenumber ;
+	
+	@FindBy(how = How.XPATH, using="//input[@id='email_address']")WebElement  emailaddress ;
+	
+	@FindBy(how = How.XPATH, using="(//i[@class='fa fa-circle-o mr-3'])[1]")WebElement   paypal;
+	
+	@FindBy(how = How.XPATH, using="(//i[@class='fa fa-circle-o mr-3'])[2]")WebElement cash_on_delivery;
+	
+	@FindBy(how = How.XPATH, using="(//i[@class='fa fa-circle-o mr-3'])[3]")WebElement credit_card;
+	
+	@FindBy(how = How.XPATH, using="(//i[@class='fa fa-circle-o mr-3'])[4]")WebElement direct_bank_transfer;
+	
+	@FindBy(xpath="(//a[@class='btn essence-btn'])[2]") WebElement place_order;
+	
+	@FindBy(xpath="(//label[@class='custom-control-label'])[1]")WebElement  check1;
+	
+	@FindBy(xpath="(//label[@class='custom-control-label'])[2]")WebElement  check2;
+	
+	@FindBy(xpath="(//label[@class='custom-control-label'])[3]")WebElement  check3;
+	
+	public void hoverPages() {
+		WebElement hoverOnPages = pages;
+		action.moveToElement(hoverOnPages).build().perform();
+	}
+	
+	public void clickOnHome() {
+		Home.click();
+	}
+	
+	public void selectContact() {
+		contact.click();
+	}
+	
+	public void alertss() {
+		
+		Alert alert = DriversInit.driver.switchTo().alert();
+				alert.accept();
+			
+	}
+	
+	public void geoLocationOk() {
+	
+		ok.click();
+	}
+	
+	public void enterMail() {
+	
+		cfs.scrollDown4();
+		
+		mailid.sendKeys("rs@gmail.com");
+	}
+	
+	public void shopAndSelectDresses() {
+		
+		cfs.scrollDown0();
+		WebElement hoverOnShop = shop;
+		action.moveToElement(hoverOnShop).build().perform();
+		Dresses.click();
+	}
+	
+	public void cart() {
+		
+		cfs.scrollDown1();
+		
+		WebElement hoverDress = hover_image;
+		action.moveToElement(hoverDress).build().perform();
+		
+		addtocart.click();
+		 WebDriverWait wait = new WebDriverWait(DriversInit.driver, Duration.ofSeconds(5));
+		 wait.until(ExpectedConditions.elementToBeClickable(addtocart));
+	boolean displayed =	addtocart.isDisplayed();
+		boolean enabled = addtocart.isEnabled();
+		System.out.println(" ");
+		System.out.println("addtocart "+displayed);
+		System.out.println("addtocart "+enabled);
+		System.out.println(" ");
+		
+	}
+	
+	public void clickChekout() {
+		cfs.scrollDown0();
+		checkoutimage.click();
+		
+		 WebDriverWait wait = new WebDriverWait(DriversInit.driver, Duration.ofSeconds(5));
+		 wait.until(ExpectedConditions.elementToBeClickable(checkoutimage));
+		 cfs.scrollDown3();
+		 WebElement hoverOnCheckOut = checkout;
+			action.moveToElement(hoverOnCheckOut).build().perform();
+		checkout.click();
+	}
+	
+	public void billingAddress() {
+		
+		firstname.sendKeys("Sachin");
+		lastname.sendKeys("Tendulkar");
+		company.sendKeys("Mumbai Indians");	
+	
+		click_country.click();		
+		 WebDriverWait wait = new WebDriverWait(DriversInit.driver, Duration.ofSeconds(5));
+		 wait.until(ExpectedConditions.elementToBeClickable(country));
+		country.click();									
+											
+		
+		streetAddress.sendKeys("D.No: 1/999-0, Dharavi Bank Street");
+		streetAddress2.sendKeys("Colaba");
+		postcode.sendKeys("400001");
+		city.sendKeys("Mumbai");
+		
+		province.sendKeys("Maharastra");
+		phonenumber.sendKeys("9078563412");
+		emailaddress.sendKeys("sachinIndian100@gmail.com");
+	}
+	
+	public void selectPayments() {
+		
+		paypal.click();
+		 WebDriverWait wait = new WebDriverWait(DriversInit.driver, Duration.ofSeconds(5));
+		 wait.until(ExpectedConditions.elementToBeClickable(paypal));
+		
+		boolean is_paypal_enabled =	paypal.isEnabled();
+		boolean is_paypal_selected = paypal.isSelected();
+		
+		System.out.println("Paypal Enabled: "+ is_paypal_enabled);
+		System.out.println("Paypal Selected: "+ is_paypal_selected);
+		System.out.println(" ");
+		
+		
+		cash_on_delivery.click();
+		 WebDriverWait wait1 = new WebDriverWait(DriversInit.driver, Duration.ofSeconds(5));
+		 wait1.until(ExpectedConditions.elementToBeClickable(cash_on_delivery));
+		boolean is_cash_on_delivery_enabled =	cash_on_delivery.isEnabled();
+		boolean is_cash_on_delivery_selected = cash_on_delivery.isSelected();
+		System.out.println(" ");
+	
+		System.out.println("cash_on_delivery Enabled: "+ is_cash_on_delivery_enabled);
+		System.out.println("cash_on_delivery Selected: "+ is_cash_on_delivery_selected);
+		System.out.println(" ");
+		
+		
+		direct_bank_transfer.click();
+		 WebDriverWait wait2 = new WebDriverWait(DriversInit.driver, Duration.ofSeconds(5));
+		 wait2.until(ExpectedConditions.elementToBeClickable(direct_bank_transfer));
+		boolean is_direct_bank_transfer_enabled =	direct_bank_transfer.isEnabled();
+		boolean is_direct_bank_transfer_selected = direct_bank_transfer.isSelected();
+		System.out.println(" ");
+		
+		System.out.println("direct_bank_transfer Enabled: "+ is_direct_bank_transfer_enabled);
+		System.out.println("direct_bank_transfer Selected: "+ is_direct_bank_transfer_selected);
+		System.out.println(" ");
+		
+		
+		credit_card.click();
+		 WebDriverWait wait3 = new WebDriverWait(DriversInit.driver, Duration.ofSeconds(5));
+		 wait3.until(ExpectedConditions.elementToBeClickable(credit_card));
+		boolean is_credit_card_enabled =	credit_card.isEnabled();
+		boolean is_credit_card_selected = credit_card.isSelected();
+		
+		System.out.println("credit_card Enabled: "+ is_credit_card_enabled);
+		System.out.println("credit_card Selected: "+ is_credit_card_selected);
+		System.out.println(" ");
+		
+	}
+	
+	public void placeOrder(){
+		
+		cfs.scrollDown4();
+		
+		WebElement po = place_order;
+		action.moveToElement(po).build().perform();
+		
+		WebDriverWait wait = new WebDriverWait(DriversInit.driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(place_order));
+		wait.until(ExpectedConditions.elementToBeClickable(place_order));
+	
+		if (place_order.isDisplayed() && place_order.isEnabled()) {
+			
+		    place_order.click();
+		} else {
+		    // Handle the case when the element is not clickable
+		    System.out.println("The place order button is not clickable.");
+		}
+		System.out.println(" ");
+		
+	}
+	
+	public void conditions()  {
+		
+		
+		check1.click();
+		WebDriverWait wait = new WebDriverWait(DriversInit.driver,Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeSelected(check1));
+		check1.isDisplayed();
+		check1.isEnabled();
+		check1.isSelected();
+		
+		
+		
+		
+		check2.click();
+		WebDriverWait wait1 = new WebDriverWait(DriversInit.driver,Duration.ofSeconds(5));
+		wait1.until(ExpectedConditions.elementToBeSelected(check2));
+		check2.isDisplayed();
+		check2.isEnabled();
+		check2.isSelected();
+	
+	
+		
+		check3.click();
+		WebDriverWait wait2 = new WebDriverWait(DriversInit.driver,Duration.ofSeconds(5));
+		wait2.until(ExpectedConditions.elementToBeClickable(check3));
+		check3.isDisplayed();
+		check3.isEnabled();
+		check3.isSelected();
+	
+		
+	}
+}

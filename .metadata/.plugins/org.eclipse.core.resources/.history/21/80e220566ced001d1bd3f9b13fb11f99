@@ -1,0 +1,104 @@
+package pageFactory;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+import utilities.DriverInit;
+import utilities.CommonFunctions;
+
+
+public class HomePageLocatorss extends  CommonFunctions {
+
+	
+	CommonFunctions cfs = new CommonFunctions();
+	Actions action = new Actions(DriverInit.driver);
+	
+	
+	public HomePageLocatorss(WebDriver driver) {
+		PageFactory.initElements( driver, this);
+	}
+	
+	
+	@FindBy(xpath=("//li[@class='cn-dropdown-item has-down pr12']"))WebElement pages; 
+	
+	@FindBy(how =How.XPATH, using="(//a[@href='index.html'])[2]")WebElement Home;
+	
+	@FindBy(xpath="(//a[@href='contact.html'])[1]")WebElement contact;
+	
+	@FindBy(how = How.XPATH, using="//button[@class=\"dismissButton\"]")WebElement ok;
+	
+	@FindBy(xpath="//input[@name=\"mail\"]")WebElement mailid;
+	
+	@FindBy(how=How.XPATH, using="//li[@class='megamenu-item']")WebElement shop;
+	
+	@FindBy(xpath="(//a[@href=\"shop.html\"])[1]")WebElement Dresses;
+	
+	@FindBy(xpath="(//a[@class=\"btn essence-btn\"])[2]")WebElement addtocart;
+	
+	@FindBy(xpath="//a[@id='essenceCartBtn']") WebElement checkoutimage;
+	
+	@FindBy(how = How.XPATH, using="(//a[@class='btn essence-btn'])[1]")WebElement checkout;
+	
+	public void hoverPages() {
+		WebElement hoverOnPages = pages;
+		action.moveToElement(hoverOnPages).build().perform();
+	}
+	
+	public void clickOnHome() {
+		Home.click();
+	}
+	
+	public void selectContact() {
+		contact.click();
+	}
+	
+	public void alertss() {
+		
+		Alert alert = DriverInit.driver.switchTo().alert();
+				alert.accept();
+			
+	}
+	
+	public void geoLocationOk() {
+		
+		ok.click();
+	}
+	
+	public void enterMail() {
+	
+		cfs.scrollDown4();
+		
+		mailid.sendKeys("rs@gmail.com");
+	}
+	
+	public void shopAndSelectDresses() {
+		
+		cfs.scrollDown0();
+		WebElement hoverOnShop = shop;
+		action.moveToElement(hoverOnShop).build().perform();
+		Dresses.click();
+	}
+	
+	public void cart() {
+		
+		cfs.scrollDown1();
+		addtocart.click();
+	boolean displayed =	addtocart.isDisplayed();
+		boolean enabled = addtocart.isEnabled();
+		System.out.println(displayed);
+		System.out.println(enabled);
+	}
+	
+	public void clickChekout() {
+		checkoutimage.click();
+		checkout.click();
+	}
+	
+	
+}

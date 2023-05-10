@@ -1,0 +1,14 @@
+package stepDefinitions;
+
+import io.cucumber.junit.platform.engine.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features="/Ecomm1/src/test/java/featureResources/EssenceEcomm.feature",
+		glue= {"stepDefinitions"},
+		reports="html:target/JunitHtmlReports/report.html"
+		)
+
+public class TestRunner {
+
+}

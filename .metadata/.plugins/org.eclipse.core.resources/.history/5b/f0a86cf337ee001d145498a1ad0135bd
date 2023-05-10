@@ -1,0 +1,121 @@
+package utilities;
+
+import org.openqa.selenium.JavascriptExecutor;
+
+public class CommonFunctions {
+	
+  
+	 public void scrollDown0() {
+	        JavascriptExecutor js = (JavascriptExecutor) DriverInit.driver;
+	        js.executeScript("window.scrollBy(0, 5)");
+	        // Get the scroll values
+	        long scrollX = (long) js.executeScript("return window.scrollX;");
+	        long scrollY = (long) js.executeScript("return window.scrollY;");
+
+	        // Print the scroll values
+	        System.out.println("ScrollX: " + scrollX);
+	        System.out.println("ScrollY: " + scrollY);
+
+	    }
+
+    public void scrollDown1() {
+        JavascriptExecutor js = (JavascriptExecutor) DriverInit.driver;
+        js.executeScript("window.scrollBy(0,250)");
+        // Get the scroll values
+        long scrollX = (long) js.executeScript("return window.scrollX;");
+        long scrollY = (long) js.executeScript("return window.scrollY;");
+
+        // Print the scroll values
+        System.out.println("ScrollX: " + scrollX);
+        System.out.println("ScrollY: " + scrollY);
+
+    }
+    
+    
+    public void scrollDown2() {
+        JavascriptExecutor js = (JavascriptExecutor) DriverInit.driver;
+        js.executeScript("window.scrollBy( 0, 500)");
+        
+        // Get the scroll values
+        long scrollX = (long) js.executeScript("return window.scrollX;");
+        long scrollY = (long) js.executeScript("return window.scrollY;");
+
+        // Print the scroll values
+        System.out.println("ScrollX: " + scrollX);
+        System.out.println("ScrollY: " + scrollY);
+
+    }
+    
+    public void scrollDown3() {
+        JavascriptExecutor js = (JavascriptExecutor) DriverInit.driver;
+        js.executeScript("window.scrollBy(0, 750)");
+        
+        // Get the scroll values
+        long scrollX = (long) js.executeScript("return window.scrollX;");
+        long scrollY = (long) js.executeScript("return window.scrollY;");
+
+        // Print the scroll values
+        System.out.println("ScrollX: " + scrollX);
+        System.out.println("ScrollY: " + scrollY);
+
+    }
+    
+    public  void scrollDown4() {
+        JavascriptExecutor js = (JavascriptExecutor) DriverInit.driver;
+        js.executeScript("window.scrollBy(0, 1000)");
+        
+        // Get the scroll values
+        long scrollX = (long) js.executeScript("return window.scrollX;");
+        long scrollY = (long) js.executeScript("return window.scrollY;");
+
+        // Print the scroll values
+        System.out.println("ScrollX: " + scrollX);
+        System.out.println("ScrollY: " + scrollY);
+        
+       
+
+
+    }
+    
+    public  void scrollDown5() {
+        JavascriptExecutor js = (JavascriptExecutor) DriverInit.driver;
+        js.executeScript("window.scrollBy(0, 1200)");
+        
+        // Get the scroll values
+        long scrollX = (long) js.executeScript("return window.scrollX;");
+        long scrollY = (long) js.executeScript("return window.scrollY;");
+
+        // Print the scroll values
+        System.out.println("ScrollX: " + scrollX);
+        System.out.println("ScrollY: " + scrollY);
+
+    }
+    
+    public  void scrollDown6() {
+        JavascriptExecutor js = (JavascriptExecutor) DriverInit.driver;
+        js.executeScript("window.scrollBy(0, 1450)");
+        
+        // Get the scroll values
+        long scrollX = (long) js.executeScript("return window.scrollX;");
+        long scrollY = (long) js.executeScript("return window.scrollY;");
+
+        // Print the scroll values
+        System.out.println("ScrollX: " + scrollX);
+        System.out.println("ScrollY: " + scrollY);
+
+    }
+    
+    public  void scrollDown7() {
+        JavascriptExecutor js = (JavascriptExecutor) DriverInit.driver;
+        js.executeScript("window.scrollBy(0, 1650)");
+        
+        // Get the scroll values
+        long scrollX = (long) js.executeScript("return window.scrollX;");
+        long scrollY = (long) js.executeScript("return window.scrollY;");
+
+        // Print the scroll values
+        System.out.println("ScrollX: " + scrollX);
+        System.out.println("ScrollY: " + scrollY);
+
+    }
+}

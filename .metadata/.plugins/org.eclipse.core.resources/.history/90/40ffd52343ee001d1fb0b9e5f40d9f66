@@ -1,0 +1,73 @@
+package stepDefinitions;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+
+public class EssenceEcommJuTest {
+	
+	
+	@Given("open Essence Ecomm WebApp.")
+	public void open_essence_ecomm_web_app() {
+
+	}
+	
+	@Then("hover on pages and click home")
+	public void hover_on_pages_and_click_home() {
+	    
+	}
+	
+	@Then("hover on pages and click contact")
+	public void hover_on_pages_and_click_contact() {
+	   
+	}
+	
+	@Then("accept the alerts")
+	public void accept_the_alerts() {
+	    
+	}
+	
+	@Then("Hover on shop and click Dresses")
+	public void hover_on_shop_and_click_dresses() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+	@Then("select a dress")
+	public void select_a_dress() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+	@Then("If the user is able to click on the Add to Cart button")
+	public void if_the_user_is_able_to_click_on_the_add_to_cart_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+	@Then("If the user is able to click on the Checkout button")
+	public void if_the_user_is_able_to_click_on_the_checkout_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+	@Then("If the user is able to add all required details in the Billing Address page")
+	public void if_the_user_is_able_to_add_all_required_details_in_the_billing_address_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+	@Then("If the user is able to click on the Place Order button")
+	public void if_the_user_is_able_to_click_on_the_place_order_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+	@Then("If the user is able to click the check boxes of conditions")
+	public void if_the_user_is_able_to_click_the_check_boxes_of_conditions() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+	
+	
+}

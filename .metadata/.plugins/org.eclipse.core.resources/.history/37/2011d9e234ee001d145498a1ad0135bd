@@ -1,0 +1,129 @@
+package testNgTestsExecution;
+
+import org.testng.annotations.AfterTest;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pageFactory.HomePageLocatorss;
+import utilities.DriverInit;
+import utilities.Reportss;
+
+
+public class HomePageTestt  {
+
+	HomePageLocatorss hpl = new HomePageLocatorss(DriverInit.openBrowser());
+	Reportss rps = new Reportss();
+	
+	
+	@BeforeTest
+	public void openUrl() {
+		DriverInit.openBrowser();
+		String curUrl=DriverInit.driver.getCurrentUrl();
+		System.out.println("Current Url is:  "+curUrl);
+	}
+	
+	@Test(priority=-1)
+	public void hoverOnPages() {
+		
+		rps.reportConfig();
+		hpl.hoverPages();
+	}
+	@Test(priority=1)
+	public void clickHome() {
+		
+		rps.reportConfig();
+		hpl.clickOnHome();
+	}
+	
+	@Test(priority=2)
+	public void clickContact() {
+		
+		rps.reportConfig();
+		hpl.hoverPages();
+		hpl.selectContact();
+	}
+	
+	@Test(priority=3)
+	public void acceptAlert() {
+		
+		rps.reportConfig();
+		hpl.alertss();
+	}
+	
+	@Test(priority=4)
+	public void accepgeoLocation() {
+		
+		rps.reportConfig();
+		hpl.geoLocationOk();
+	}
+	
+	@Test(priority=5)
+	public void subscribeEssence() {
+		
+		rps.reportConfig();
+		hpl.enterMail();
+	}
+	
+	@Test(priority=6)
+	public void hoverOnShopSelectDresses() {
+		
+		rps.reportConfig();
+		hpl.shopAndSelectDresses();
+	}
+	
+	@Test(priority=7)
+	public void selectAproductAndClickAddToCart() {
+		
+		rps.reportConfig();
+		hpl.cart();
+	}
+	
+	@Test(priority=8)
+	public void goToCheckout() {
+		
+		rps.reportConfig();
+		hpl.clickChekout();
+	}
+	
+	@Test(priority=9)
+	public void enterBillingAddressDetails() {
+		
+		rps.reportConfig();
+		hpl.billingAddress();
+		
+	}
+	
+	@Test(priority=10)
+	public void selectPayment() throws InterruptedException {
+		
+		rps.reportConfig();
+		hpl.selectPayments();
+		
+	}
+	
+	@Test(priority=11)
+	public void clickOnPlaceOrder() throws InterruptedException {
+
+		rps.reportConfig();
+		hpl.placeOrder();
+		
+	}
+	
+	@Test(priority=12)
+	public void acceptConditions() throws InterruptedException {
+		
+		rps.reportConfig();
+		hpl.placeOrder();
+		
+	}
+	
+	@AfterTest
+	public void quitBrowser() {
+		
+		rps.flush();
+		DriverInit.closeBrowser();
+	}
+	
+	
+}

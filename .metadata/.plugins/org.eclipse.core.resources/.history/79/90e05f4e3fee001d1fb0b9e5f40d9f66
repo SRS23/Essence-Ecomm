@@ -1,0 +1,15 @@
+#Author: your.email@your.domain.com
+
+
+
+Feature: Testing Essence Ecomm Homepage, Checkout, Add to Cart Functionalities.
+  
+  @Smoke
+  Scenario: Use different locators to test elements like textboxes, buttons,
+   checkboxes, and radio buttons on the application.
+   
+    Given I want to write a step with precondition
+    Then If the user is able to click on the Add to Cart button
+		Then If the user is able to click on the Checkout button
+		Then If the user is able to add all required details in the Billing Address page
+		Then If the user is able to click on the Place Order button

@@ -1,0 +1,20 @@
+package utilities;
+
+import com.aventstack.extentreports.ExtentReports;
+
+import com.aventstack.extentreports.reporter.ExtentReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class Reportss {
+
+	ExtentReports extent;
+	
+	public void reportConfig() {
+		String reportName = "ExtentReport.html";
+		String path = System.getProperty("user.dir")+ "/test-output/" + reportName;
+		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+		extent = new ExtentReports();
+		extent.attachReporter(reporter);
+		
+	}
+}

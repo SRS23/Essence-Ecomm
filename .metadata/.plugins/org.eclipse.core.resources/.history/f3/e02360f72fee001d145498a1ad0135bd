@@ -1,0 +1,15 @@
+package utilities;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentReporter;
+
+public class Reportss {
+
+	ExtentReports extent;
+	
+	public void reportConfig() {
+		String reportName = "ExtentReport.html";
+		String path = System.getProperty("user.dir")+ "/test-output/" + reportName;
+		
+	}
+}

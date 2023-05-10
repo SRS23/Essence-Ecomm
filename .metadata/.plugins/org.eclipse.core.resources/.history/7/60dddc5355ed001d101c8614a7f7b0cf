@@ -1,0 +1,45 @@
+package testNgTestsExecution;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pageFactory.HomePageLocatorss;
+import utilities.DriverInit;
+
+public class HomePageTestt  {
+
+	HomePageLocatorss hpl = new HomePageLocatorss(DriverInit.openBrowser());
+	
+	@BeforeTest
+	public void openUrl() {
+		DriverInit.openBrowser();
+		String curUrl=DriverInit.driver.getCurrentUrl();
+		System.out.println("Current Url is:  "+curUrl);
+	}
+	
+	@Test(priority=-1)
+	public void hoverOnPages() {
+		
+		hpl.hoverPages();
+	}
+	@Test(priority=1)
+	public void clickHome() {
+		hpl.clickOnHome();
+	}
+	
+	@Test(priority=2)
+	public void clickContact() {
+		
+		hpl.hoverPages();
+		hpl.selectContact();
+	}
+	
+	@AfterTest
+	public void quitBrowser() {
+		
+		DriverInit.closeBrowser();
+	}
+	
+	
+}

@@ -1,0 +1,130 @@
+package testNgTestsExecution;
+
+import org.testng.annotations.AfterTest;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import pageFactory.HomePageLocatorss;
+import utilities.DriverInit;
+import utilities.Reportss;
+
+
+public class HomePageTestt extends Reportss  {
+
+	HomePageLocatorss hpl = new HomePageLocatorss(DriverInit.openBrowser());
+	
+	
+	
+	@BeforeTest
+	public void openUrl() {
+		
+		DriverInit.openBrowser();
+		String curUrl=DriverInit.driver.getCurrentUrl();
+		System.out.println("Current Url is:  "+curUrl);
+	}
+	
+	@Test(priority=-1)
+	public void hoverOnPages() {
+		
+		rps.createTest("Hover On Pages Option. ");
+		hpl.hoverPages();
+	}
+	@Test(priority=1)
+	public void clickHome() {
+		
+		rps.createTest("Click On Home. ");
+		hpl.clickOnHome();
+	}
+	
+	@Test(priority=2)
+	public void clickContact() {
+		
+		rps.createTest("Hover on Pages Option and click on contact. ");
+		hpl.hoverPages();
+		hpl.selectContact();
+	}
+	
+	@Test(priority=3)
+	public void acceptAlert() {
+		
+		rps.createTest("accept the alert. ");
+		hpl.alertss();
+	}
+	
+	@Test(priority=4)
+	public void accepgeoLocation() {
+		
+		rps.createTest("Click ok for geo location.");
+		hpl.geoLocationOk();
+	}
+	
+	@Test(priority=5)
+	public void subscribeEssence() {
+		
+		rps.createTest("Enter Email to subscribe for Essence Ecomm. ");
+		hpl.enterMail();
+	}
+	
+	@Test(priority=6)
+	public void hoverOnShopSelectDresses() {
+		
+		rps.createTest(" Hover on Shop Option and click on Dresses. ");
+		hpl.shopAndSelectDresses();
+	}
+	
+	@Test(priority=7)
+	public void selectAproductAndClickAddToCart() {
+		
+		rps.createTest("select a product and add it to cart. ");
+		hpl.cart();
+	}
+	
+	@Test(priority=8)
+	public void goToCheckout() {
+		
+		rps.createTest("Navigate to checkout. ");
+		hpl.clickChekout();
+	}
+	
+	@Test(priority=9)
+	public void enterBillingAddressDetails() {
+		
+		rps.createTest("Enter details for Billing Address. ");
+		hpl.billingAddress();
+		
+	}
+	
+	@Test(priority=10)
+	public void selectPayment() throws InterruptedException {
+		
+		rps.createTest("Check different payment options. ");
+		hpl.selectPayments();
+		
+	}
+	
+	@Test(priority=11)
+	public void clickOnPlaceOrder() throws InterruptedException {
+
+		rps.createTest("Click Place order. ");
+		hpl.placeOrder();
+		
+	}
+	
+	@Test(priority=12)
+	public void acceptConditions() throws InterruptedException {
+		
+		rps.createTest("Accept the conditions. ");
+		hpl.placeOrder();
+		
+	}
+	
+	@AfterTest
+	public void quitBrowser() {
+		
+		rps.flush();
+		DriverInit.closeBrowser();
+	}
+	
+	
+}

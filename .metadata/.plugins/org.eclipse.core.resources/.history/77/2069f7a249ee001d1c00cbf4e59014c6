@@ -1,0 +1,12 @@
+package pageFactory;
+
+import org.openqa.selenium.support.PageFactory;
+
+public class EssenceEcommWebElements {
+	
+	public EssenceEcommWebElements(WebDriver driver) {
+		
+		PageFactory.initElements( driver, this);
+	}
+	
+}
